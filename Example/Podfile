@@ -1,0 +1,9 @@
+target 'WQRoute_Example' do
+  pod 'WQRoute', :path => '../'
+
+  target 'WQRoute_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end

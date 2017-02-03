@@ -1,0 +1,19 @@
+PODS:
+  - Kiwi (2.4.0)
+  - WQRoute (0.1.0)
+
+DEPENDENCIES:
+  - Kiwi
+  - WQRoute (from `../`)
+
+EXTERNAL SOURCES:
+  WQRoute:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  WQRoute: d7a37106e343abad44dd11db132b18572999ee6f
+
+PODFILE CHECKSUM: c90241a15917bc2da08af06080bb8eea1a54c6d7
+
+COCOAPODS: 1.2.0
