@@ -86,7 +86,7 @@ $ pod install
 
 ```objc
 - (void)test1 {
-    NSString *urlString = @"testzzb://woqugame/present/loginVC/admin/123456789/0/";
+    NSString *urlString = @"testzzb://woqugame/present/loginVC/admin/123456789/";
     [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
 }
 
