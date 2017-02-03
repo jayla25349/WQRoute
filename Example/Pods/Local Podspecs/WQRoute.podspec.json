@@ -1,7 +1,7 @@
 {
   "name": "WQRoute",
   "version": "0.1.0",
-  "summary": "A short description of WQRoute.",
+  "summary": "A route framework for ios.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jayla25349/WQRoute",
   "license": {

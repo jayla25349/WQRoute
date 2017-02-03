@@ -14,7 +14,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* WQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* WQAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* WQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* WQViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -24,6 +23,16 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		AA60464DAEC477D3A16F4194 /* libPods-WQRoute_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F837F086C3611BD5F53048FE /* libPods-WQRoute_Example.a */; };
+		EC7C8D871E446C520057AEB3 /* WQCommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D731E446C520057AEB3 /* WQCommonService.m */; };
+		EC7C8D881E446C520057AEB3 /* WQRouteLoggerMiddleware.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D751E446C520057AEB3 /* WQRouteLoggerMiddleware.m */; };
+		EC7C8D891E446C520057AEB3 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D781E446C520057AEB3 /* BSNavigationController.m */; };
+		EC7C8D8A1E446C520057AEB3 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D7A1E446C520057AEB3 /* BSViewController.m */; };
+		EC7C8D8B1E446C520057AEB3 /* WQHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D7C1E446C520057AEB3 /* WQHomeVC.m */; };
+		EC7C8D8C1E446C520057AEB3 /* WQLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D7E1E446C520057AEB3 /* WQLoginVC.m */; };
+		EC7C8D8D1E446C520057AEB3 /* WQTest1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D801E446C520057AEB3 /* WQTest1VC.m */; };
+		EC7C8D8E1E446C520057AEB3 /* WQTest2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D821E446C520057AEB3 /* WQTest2VC.m */; };
+		EC7C8D8F1E446C520057AEB3 /* WQTest3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D841E446C520057AEB3 /* WQTest3VC.m */; };
+		EC7C8D901E446C520057AEB3 /* WQWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8D861E446C520057AEB3 /* WQWebVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +58,6 @@
 		6003F59B195388D20070C39A /* WQRoute-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WQRoute-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* WQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* WQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* WQViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* WQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* WQRoute_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WQRoute_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -65,6 +72,26 @@
 		B66565878D215C460C962812 /* WQRoute.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WQRoute.podspec; path = ../WQRoute.podspec; sourceTree = "<group>"; };
 		D513AC86504783945F5C18EB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EB8BA3F27BDBCA9B71792D60 /* Pods-WQRoute_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQRoute_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQRoute_Tests/Pods-WQRoute_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC7C8D721E446C520057AEB3 /* WQCommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCommonService.h; sourceTree = "<group>"; };
+		EC7C8D731E446C520057AEB3 /* WQCommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCommonService.m; sourceTree = "<group>"; };
+		EC7C8D741E446C520057AEB3 /* WQRouteLoggerMiddleware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQRouteLoggerMiddleware.h; sourceTree = "<group>"; };
+		EC7C8D751E446C520057AEB3 /* WQRouteLoggerMiddleware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQRouteLoggerMiddleware.m; sourceTree = "<group>"; };
+		EC7C8D771E446C520057AEB3 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
+		EC7C8D781E446C520057AEB3 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		EC7C8D791E446C520057AEB3 /* BSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
+		EC7C8D7A1E446C520057AEB3 /* BSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
+		EC7C8D7B1E446C520057AEB3 /* WQHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHomeVC.h; sourceTree = "<group>"; };
+		EC7C8D7C1E446C520057AEB3 /* WQHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHomeVC.m; sourceTree = "<group>"; };
+		EC7C8D7D1E446C520057AEB3 /* WQLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLoginVC.h; sourceTree = "<group>"; };
+		EC7C8D7E1E446C520057AEB3 /* WQLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLoginVC.m; sourceTree = "<group>"; };
+		EC7C8D7F1E446C520057AEB3 /* WQTest1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTest1VC.h; sourceTree = "<group>"; };
+		EC7C8D801E446C520057AEB3 /* WQTest1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTest1VC.m; sourceTree = "<group>"; };
+		EC7C8D811E446C520057AEB3 /* WQTest2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTest2VC.h; sourceTree = "<group>"; };
+		EC7C8D821E446C520057AEB3 /* WQTest2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTest2VC.m; sourceTree = "<group>"; };
+		EC7C8D831E446C520057AEB3 /* WQTest3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTest3VC.h; sourceTree = "<group>"; };
+		EC7C8D841E446C520057AEB3 /* WQTest3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTest3VC.m; sourceTree = "<group>"; };
+		EC7C8D851E446C520057AEB3 /* WQWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQWebVC.h; sourceTree = "<group>"; };
+		EC7C8D861E446C520057AEB3 /* WQWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQWebVC.m; sourceTree = "<group>"; };
 		F808B0A23698384B9C50B75D /* Pods-WQRoute_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQRoute_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WQRoute_Example/Pods-WQRoute_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F837F086C3611BD5F53048FE /* libPods-WQRoute_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WQRoute_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,11 +159,11 @@
 		6003F593195388D20070C39A /* Example for WQRoute */ = {
 			isa = PBXGroup;
 			children = (
+				EC7C8D711E446C520057AEB3 /* Logic */,
+				EC7C8D761E446C520057AEB3 /* UI */,
 				6003F59C195388D20070C39A /* WQAppDelegate.h */,
 				6003F59D195388D20070C39A /* WQAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* WQViewController.h */,
-				6003F5A6195388D20070C39A /* WQViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -194,6 +221,40 @@
 				4616A16156129B267DD1B9F5 /* Pods-WQRoute_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC7C8D711E446C520057AEB3 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				EC7C8D721E446C520057AEB3 /* WQCommonService.h */,
+				EC7C8D731E446C520057AEB3 /* WQCommonService.m */,
+				EC7C8D741E446C520057AEB3 /* WQRouteLoggerMiddleware.h */,
+				EC7C8D751E446C520057AEB3 /* WQRouteLoggerMiddleware.m */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		EC7C8D761E446C520057AEB3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EC7C8D771E446C520057AEB3 /* BSNavigationController.h */,
+				EC7C8D781E446C520057AEB3 /* BSNavigationController.m */,
+				EC7C8D791E446C520057AEB3 /* BSViewController.h */,
+				EC7C8D7A1E446C520057AEB3 /* BSViewController.m */,
+				EC7C8D7B1E446C520057AEB3 /* WQHomeVC.h */,
+				EC7C8D7C1E446C520057AEB3 /* WQHomeVC.m */,
+				EC7C8D7D1E446C520057AEB3 /* WQLoginVC.h */,
+				EC7C8D7E1E446C520057AEB3 /* WQLoginVC.m */,
+				EC7C8D7F1E446C520057AEB3 /* WQTest1VC.h */,
+				EC7C8D801E446C520057AEB3 /* WQTest1VC.m */,
+				EC7C8D811E446C520057AEB3 /* WQTest2VC.h */,
+				EC7C8D821E446C520057AEB3 /* WQTest2VC.m */,
+				EC7C8D831E446C520057AEB3 /* WQTest3VC.h */,
+				EC7C8D841E446C520057AEB3 /* WQTest3VC.m */,
+				EC7C8D851E446C520057AEB3 /* WQWebVC.h */,
+				EC7C8D861E446C520057AEB3 /* WQWebVC.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,9 +458,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7C8D901E446C520057AEB3 /* WQWebVC.m in Sources */,
+				EC7C8D881E446C520057AEB3 /* WQRouteLoggerMiddleware.m in Sources */,
+				EC7C8D8E1E446C520057AEB3 /* WQTest2VC.m in Sources */,
 				6003F59E195388D20070C39A /* WQAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* WQViewController.m in Sources */,
+				EC7C8D8A1E446C520057AEB3 /* BSViewController.m in Sources */,
+				EC7C8D8D1E446C520057AEB3 /* WQTest1VC.m in Sources */,
+				EC7C8D871E446C520057AEB3 /* WQCommonService.m in Sources */,
+				EC7C8D891E446C520057AEB3 /* BSNavigationController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				EC7C8D8C1E446C520057AEB3 /* WQLoginVC.m in Sources */,
+				EC7C8D8F1E446C520057AEB3 /* WQTest3VC.m in Sources */,
+				EC7C8D8B1E446C520057AEB3 /* WQHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

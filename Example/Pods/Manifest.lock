@@ -1,9 +1,27 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - Kiwi (2.4.0)
+  - SVProgressHUD (2.1.2)
   - WQRoute (0.1.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - Kiwi
+  - SVProgressHUD
   - WQRoute (from `../`)
 
 EXTERNAL SOURCES:
@@ -11,9 +29,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  WQRoute: d7a37106e343abad44dd11db132b18572999ee6f
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  WQRoute: 9941bb272443ecad7ab5e7d21ca1d7a5cdf16da2
 
-PODFILE CHECKSUM: c90241a15917bc2da08af06080bb8eea1a54c6d7
+PODFILE CHECKSUM: 810dbe536999b3a2bb790a8d67cee9f6285020a2
 
 COCOAPODS: 1.2.0

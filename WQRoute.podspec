@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'WQRoute'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of WQRoute.'
+  s.summary          = 'A route framework for ios.'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.

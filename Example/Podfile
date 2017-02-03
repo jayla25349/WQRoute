@@ -1,9 +1,11 @@
 target 'WQRoute_Example' do
-  pod 'WQRoute', :path => '../'
-
-  target 'WQRoute_Tests' do
-    inherit! :search_paths
-
-    pod 'Kiwi'
-  end
+    pod 'WQRoute', :path => '../'
+    pod 'AFNetworking'
+    pod 'SVProgressHUD'
+    
+    target 'WQRoute_Tests' do
+        inherit! :search_paths
+        
+        pod 'Kiwi'
+    end
 end
