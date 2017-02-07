@@ -19,10 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation WQRouteDispatcher
 
-- (void)dealloc {
-    NSLog(@"%s", __FUNCTION__);
-}
-
 - (nullable instancetype)initWithPattern:(NSString *)pattern target:(id)target selector:(SEL)selector {
     @try {
         NSError *error = nil;

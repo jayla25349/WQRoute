@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary          = 'A route framework for ios.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+WQRoute is a route framework for iOS.
                        DESC
 
   s.homepage         = 'https://github.com/jayla25349/WQRoute'
