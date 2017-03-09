@@ -21,6 +21,13 @@ WQRoute is a route framework for iOS.
   s.source           = { :git => 'https://github.com/jayla25349/WQRoute.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '7.0'
+  s.pod_target_xcconfig    = { 'OTHER_LDFLAGS' => '-lObjC' }
 
   s.source_files = 'WQRoute/Classes/**/*'
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.resource_bundles = {
+  #   'WQFramework' => ['WQFramework/Assets/*.png']
+  # }
+
+  s.frameworks = 'UIKit', 'Foundation'
 end
