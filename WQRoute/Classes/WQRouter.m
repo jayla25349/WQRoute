@@ -51,21 +51,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 //默认路由器
 + (instancetype)defaultRouter {
-    static WQRouter *router = nil;
+    static WQRouter *router;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         router = [[WQRouter alloc] init];
     });
     return router;
-}
-
-//注册服务
-- (void)registerPattern:(NSString *)pattern target:(id)target selector:(SEL)selector {
-    WQRouteDispatcher *dispatcher = [WQRouteDispatcher dispatcherWithPattern:pattern target:target selector:selector];
-    if (dispatcher) {
-        [self.dispatchers addObject:dispatcher];
-        ROUTELog(@"注册服务--->:%@", pattern);
-    }
 }
 
 //注册中间件
@@ -88,6 +79,15 @@ NS_ASSUME_NONNULL_BEGIN
     }
 }
 
+//注册服务
+- (void)registerPattern:(NSString *)pattern target:(id)target selector:(SEL)selector {
+    WQRouteDispatcher *dispatcher = [WQRouteDispatcher dispatcherWithPattern:pattern target:target selector:selector];
+    if (dispatcher) {
+        [self.dispatchers addObject:dispatcher];
+        ROUTELog(@"注册服务--->:%@", pattern);
+    }
+}
+
 //路由
 - (BOOL)routeRequest:(WQRouteRequest *)request {
     @try {
@@ -95,7 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
         ROUTELog(@"");
         ROUTELog(@"xxxxxxxxxxxxxxxxxxxxxxxxx路由开始(%@)xxxxxxxxxxxxxxxxxxxxxxxxx", request);
         ROUTELog(@"路由URL--->:%@", request.URL);
-        NSString *path = request.URL.path;
+        NSString *path = request.URL.absoluteString;
         if (!path) {
             [NSException raise:WQRouteURLException format:@"URL错误"];
         }
@@ -141,17 +141,19 @@ NS_ASSUME_NONNULL_BEGIN
         ROUTELog(@"");
     }
 }
-- (BOOL)routeURL:(NSURL *)URL data:(nullable id)data callBack:(nullable WQRouteCallbackBlock)block {
+- (BOOL)routeURL:(NSURL *)URL sender:(id)sender data:(nullable id)data callBack:(nullable WQRouteCallbackBlock)block {
     WQRouteRequest *request = [[WQRouteRequest alloc] initWithURL:URL
+                                                           sender:sender
                                                              data:data
                                                   routeParameters:nil
                                                   queryParameters:nil
                                                          callBack:block];
     return [self routeRequest:request];
 }
-- (BOOL)routeURLString:(NSString *)URLString data:(nullable id)data callBack:(nullable WQRouteCallbackBlock)block {
-    URLString = [URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [self routeURL:[NSURL URLWithString:URLString] data:data callBack:block];
+- (BOOL)routeURLString:(NSString *)URLString sender:(nullable id)sender data:(nullable id)data callBack:(nullable WQRouteCallbackBlock)block {
+    NSString *routeUrl = [URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *routeURL = [NSURL URLWithString:routeUrl];
+    return [self routeURL:routeURL sender:sender data:data callBack:block];
 }
 
 @end

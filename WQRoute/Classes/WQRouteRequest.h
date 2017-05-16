@@ -28,20 +28,21 @@ typedef enum {
 typedef void (^WQRouteCallbackBlock)(WQRouteRequest *request, id _Nullable response, NSError * _Nullable error);
 
 @interface WQRouteRequest : NSObject
-@property (nonatomic, copy, readonly) NSURL *URL;
-@property (nonatomic, copy, readonly, nullable) id data;
-@property (nonatomic, copy, readonly, nullable) NSArray *routeParameters;
-@property (nonatomic, copy, readonly, nullable) NSDictionary *queryParameters;
-@property (nonatomic, copy, readonly, nullable) WQRouteCallbackBlock callBack;
+@property (nonatomic, strong, readonly) NSURL *URL;
+@property (nonatomic, strong, readonly, nullable) id sender;
+@property (nonatomic, strong, readonly, nullable) id data;
+@property (nonatomic, strong, readonly, nullable) NSArray *routeParameters;
+@property (nonatomic, strong, readonly, nullable) NSDictionary *queryParameters;
+@property (nonatomic, copy,   readonly, nullable) WQRouteCallbackBlock callBack;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
-- (instancetype)initWithURL:(NSURL *)URL data:(nullable id)data
+- (instancetype)initWithURL:(NSURL *)URL sender:(nullable id)sender data:(nullable id)data
             routeParameters:(nullable NSArray *)routeParameters
             queryParameters:(nullable NSDictionary *)queryParameters
                    callBack:(nullable WQRouteCallbackBlock)block;
-+ (instancetype)reqeustWithURL:(NSURL *)URL data:(nullable id)data
++ (instancetype)reqeustWithURL:(NSURL *)URL sender:(nullable id)sender data:(nullable id)data
                routeParameters:(nullable NSArray *)routeParameters
                queryParameters:(nullable NSDictionary *)queryParameters
                       callBack:(nullable WQRouteCallbackBlock)block;

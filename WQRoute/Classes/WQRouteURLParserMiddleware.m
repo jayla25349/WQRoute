@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
             [tempDictionary setValue:tempArray.lastObject forKey:tempArray.firstObject];
         }];
         request = [[WQRouteRequest alloc] initWithURL:request.URL
+                                               sender:request.sender
                                                  data:request.data
                                       routeParameters:request.routeParameters
                                       queryParameters:tempDictionary.count>0?tempDictionary:nil
@@ -46,6 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
             [parameters addObject:string];
         }
         request = [[WQRouteRequest alloc] initWithURL:request.URL
+                                               sender:request.sender
                                                  data:request.data
                                       routeParameters:parameters.count>0?parameters:nil
                                       queryParameters:request.queryParameters

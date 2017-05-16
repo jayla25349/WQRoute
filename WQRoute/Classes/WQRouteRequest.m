@@ -18,21 +18,25 @@ NSExceptionName const WQRouteMiddlewareException = @"WQRouteMiddlewareException"
 NSErrorDomain const WQRouteErrorDomian = @"WQRouteErrorDomian";
 
 @interface WQRouteRequest ()
-@property (nonatomic, copy) NSURL *URL;
-@property (nonatomic, copy, nullable) id data;
-@property (nonatomic, copy, nullable) NSArray *routeParameters;
-@property (nonatomic, copy, nullable) NSDictionary *queryParameters;
-@property (nonatomic, copy, nullable) WQRouteCallbackBlock callBack;
+@property (nonatomic, strong) NSURL *URL;
+@property (nonatomic, strong, nullable) id sender;
+@property (nonatomic, strong, nullable) id data;
+@property (nonatomic, strong, nullable) NSArray *routeParameters;
+@property (nonatomic, strong, nullable) NSDictionary *queryParameters;
+@property (nonatomic, copy,   nullable) WQRouteCallbackBlock callBack;
 @end
 
 @implementation WQRouteRequest
 
-- (instancetype)initWithURL:(NSURL *)URL data:(nullable id)data
+- (instancetype)initWithURL:(NSURL *)URL
+                     sender:(nullable id)sender
+                       data:(nullable id)data
             routeParameters:(nullable NSArray *)routeParameters
             queryParameters:(nullable NSDictionary *)queryParameters
                    callBack:(nullable WQRouteCallbackBlock)block {
     if (self = [super init]) {
         self.URL = URL;
+        self.sender = sender;
         self.data = data;
         self.routeParameters = routeParameters;
         self.queryParameters = queryParameters;
@@ -40,11 +44,18 @@ NSErrorDomain const WQRouteErrorDomian = @"WQRouteErrorDomian";
     }
     return self;
 }
-+ (instancetype)reqeustWithURL:(NSURL *)URL data:(nullable id)data
++ (instancetype)reqeustWithURL:(NSURL *)URL
+                        sender:(nullable id)sender
+                          data:(nullable id)data
                routeParameters:(nullable NSArray *)routeParameters
                queryParameters:(nullable NSDictionary *)queryParameters
                       callBack:(nullable WQRouteCallbackBlock)block {
-    return [[WQRouteRequest alloc] initWithURL:URL data:data routeParameters:routeParameters queryParameters:queryParameters callBack:block];
+    return [[WQRouteRequest alloc] initWithURL:URL
+                                        sender:sender
+                                          data:data
+                               routeParameters:routeParameters
+                               queryParameters:queryParameters
+                                      callBack:block];
 }
 
 @end

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WQRouteDispatcher ()
 @property (nonatomic, strong) NSRegularExpression *regular;
 @property (nonatomic, strong) NSInvocation *invocation;
-@property (nonatomic, weak) id target;
+@property (nonatomic, weak  ) id target;
 @property (nonatomic, assign) SEL selector;
 @end
 
@@ -45,11 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)performRequest:(WQRouteRequest *)request {
-    self.invocation.target = self.target;
-    if (self.target) {
-        
-        //注入参数
+    if (!self.target) {
+        return;
+    }
+    
+    //注入参数
+    if (self.invocation.methodSignature.numberOfArguments > 2) {
         [self.invocation setArgument:&request atIndex:2];
+        
         for (NSUInteger i=3; i<self.invocation.methodSignature.numberOfArguments; i++) {
             void *argument = nil;
             if (i-3<request.routeParameters.count) {
@@ -87,8 +90,10 @@ NS_ASSUME_NONNULL_BEGIN
                 [self.invocation setArgument:&argument atIndex:i];
             }
         }
-        [self.invocation invoke];
     }
+    
+    //执行方法
+    [self.invocation invokeWithTarget:self.target];
 }
 
 @end

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WQRouteDispatcher : NSObject
 @property (nonatomic, strong, readonly) NSRegularExpression *regular;
-@property (nonatomic, weak, readonly) id target;
+@property (nonatomic, weak,   readonly) id target;
 @property (nonatomic, assign, readonly) SEL selector;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
@@ -24,4 +24,5 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)performRequest:(WQRouteRequest *)request;
 @end
+
 NS_ASSUME_NONNULL_END
