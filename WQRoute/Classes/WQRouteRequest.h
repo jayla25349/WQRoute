@@ -32,8 +32,7 @@ typedef void (^WQRouteCallbackBlock)(WQRouteRequest *request, id _Nullable respo
 @property (nonatomic, strong, readonly, nullable) id sender;
 @property (nonatomic, strong, readonly, nullable) id data;
 @property (nonatomic, copy,   readonly, nullable) WQRouteCallbackBlock callback;
-@property (nonatomic, strong, readonly) NSDictionary *queryParameters;
-@property (nonatomic, strong, readonly) NSArray *routeParameters;
+@property (nonatomic, strong, readonly, nullable) NSDictionary *queryParameters;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
