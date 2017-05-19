@@ -15,8 +15,8 @@
 /**********************************************************************/
 
 + (void)load {
-    ROUTE(@"^/show/alert/(\\S+)/(\\S+)$", showAlert:title:message:)
-    ROUTE(@"^/show/locatioin/(\\S+)$", showLocation:point:)
+    ROUTE_REGISTER(@"^testzzb://woqugame/show/alert/(\\S+)/(\\S+)$", showAlert:title:message:)
+    ROUTE_REGISTER(@"^testzzb://woqugame/show/locatioin/(\\S+)$", showLocation:point:)
 }
 
 + (void)showAlert:(WQRouteRequest *)request title:(NSString *)title message:(NSString *)message{

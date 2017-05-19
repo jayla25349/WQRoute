@@ -16,7 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - Kiwi (2.4.0)
   - SVProgressHUD (2.1.2)
-  - WQRoute (0.1.0)
+  - WQRoute (0.3.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -32,8 +32,8 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  WQRoute: 9941bb272443ecad7ab5e7d21ca1d7a5cdf16da2
+  WQRoute: fda472c9090baaade19b84d6a88d9b9793d7337b
 
-PODFILE CHECKSUM: 810dbe536999b3a2bb790a8d67cee9f6285020a2
+PODFILE CHECKSUM: 9ed26c1b21a25be9259485be057324c0cc12ada5
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

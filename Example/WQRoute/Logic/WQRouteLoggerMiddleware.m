@@ -12,10 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-- (nullable WQRouteRequest *)processRequest:(WQRouteRequest *)request dispatcher:(WQRouteDispatcher *)dispatcher {
-    ROUTELog(@"传输参数--->:%@", request.data);
-    ROUTELog(@"路由参数--->:%@", request.routeParameters);
-    ROUTELog(@"查寻参数--->:%@", request.queryParameters);
+- (nullable WQRouteRequest *)processRequest:(WQRouteRequest *)request {
+    NSLog(@"传输参数--->:%@", request.data);
+    NSLog(@"查寻参数--->:%@", request.queryParameters);
     return request;
 }
 

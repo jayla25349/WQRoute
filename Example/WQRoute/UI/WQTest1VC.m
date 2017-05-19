@@ -19,15 +19,15 @@
 /**********************************************************************/
 
 + (void)load {
-    ROUTE(@"^/push/test1VC$", pushTest1VC:)
+    ROUTE_REGISTER(@"^testzzb://woqugame/push/test1VC$", pushTest1VC:)
 }
 
 + (void)pushTest1VC:(WQRouteRequest *)request {
-    UINavigationController *nav = (UINavigationController *)[[[UIApplication sharedApplication] delegate] window].rootViewController;
-    id vc = [self controller];
-    [nav pushViewController:vc animated:YES];
-    if (request.callBack) {
-        request.callBack(request, nil, nil);
+    if ([request.sender isKindOfClass:[UIViewController class]]) {
+        UIViewController *lastVC = (UIViewController *)request.sender;
+        id vc = [self controller];
+        [lastVC.navigationController pushViewController:vc animated:YES];
+        [request doResponseCallback:vc];
     }
 }
 
@@ -37,22 +37,22 @@
 
 - (IBAction)vc1Action:(id)sender {
     NSString *urlString = @"testzzb://woqugame/push/test1VC";
-    [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+    ROUTE_URL(urlString, nil)
 }
 
 - (IBAction)vc2Action:(id)sender {
     NSString *urlString = @"testzzb://woqugame/push/test2VC";
-    [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+    ROUTE_URL(urlString, nil)
 }
 
 - (IBAction)vc3Action:(id)sender {
     NSString *urlString = @"testzzb://woqugame/push/test3VC";
-    [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+    ROUTE_URL(urlString, nil)
 }
 
 - (IBAction)testAction:(id)sender {
     NSString *urlString = @"testzzb://woqugame/show/test2VC/toast?message=页面1测试";
-    [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+    ROUTE_URL(urlString, nil)
 }
 
 @end

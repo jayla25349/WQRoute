@@ -21,25 +21,25 @@
     switch (indexPath.row) {
         case 0:{
             urlString = @"testzzb://woqugame/show/alert/这是标题/这是消息内容";
-//            urlString = @"testzzb://woqugame/show/locatioin/{1,234}";
-            [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+            //            urlString = @"testzzb://woqugame/show/locatioin/{1,234}";
+            ROUTE_URL(urlString, nil)
         }break;
         case 1:{
             urlString = @"testzzb://woqugame/push/test1VC";
-            [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+            ROUTE_URL(urlString, nil)
         }break;
         case 2:{
-            urlString = @"testzzb://woqugame/push/webVC/http://www.kylincc.com";
-            [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+            urlString = @"testzzb://woqugame/push/webVC/";
+            ROUTE_URL(urlString, @"http://www.kylincc.com")
         }break;
         case 3:{
             urlString = @"testzzb://woqugame/present/loginVC/admin/123456789/0/";
-            [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:nil];
+            ROUTE_URL(urlString, nil)
         }break;
         case 4:{
             [SVProgressHUD show];
-            urlString = @"testzzb://woqugame/user/login/admin/123456789";
-            [[WQRouter defaultRouter] routeURLString:urlString data:nil callBack:^(WQRouteRequest * _Nonnull request, id  _Nullable response, NSError * _Nullable error) {
+            urlString = @"testzzb://woqugame/user/login/admin/123456789/";
+            [ROUTE_URL_CALLBACK(urlString, nil) callback:^(WQRouteRequest * _Nonnull request, id  _Nullable response, NSError * _Nullable error) {
                 if (error) {
                     [SVProgressHUD showErrorWithStatus:error.localizedDescription];
                 } else {

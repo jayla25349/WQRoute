@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WQRoute'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'A route framework for ios.'
 
   s.description      = <<-DESC
@@ -24,10 +24,10 @@ WQRoute is a route framework for iOS.
   s.pod_target_xcconfig    = { 'OTHER_LDFLAGS' => '-lObjC' }
 
   s.source_files = 'WQRoute/Classes/**/*'
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'WQRoute/Classes/**/*.h'
   # s.resource_bundles = {
   #   'WQFramework' => ['WQFramework/Assets/*.png']
   # }
 
-  s.frameworks = 'UIKit', 'Foundation'
+  s.frameworks = 'Foundation'
 end

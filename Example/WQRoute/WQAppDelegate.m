@@ -13,7 +13,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[WQRouter defaultRouter] registerMiddleware:[WQRouteURLVerifyMiddleware middlewareWithScheme:@"testzzb" host:@"woqugame"]];
-    [[WQRouter defaultRouter] registerMiddleware:[WQRouteURLParserMiddleware new]];
     [[WQRouter defaultRouter] registerMiddleware:[WQRouteLoggerMiddleware new]];
     
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
@@ -22,7 +21,7 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    return [[WQRouter defaultRouter] routeURL:url data:nil callBack:^(WQRouteRequest * _Nonnull request, id  _Nullable response, NSError * _Nullable error) {
+    return [ROUTE_URL_CALLBACK(url.absoluteString, nil) callback:^(WQRouteRequest * _Nonnull request, id  _Nullable response, NSError * _Nullable error) {
         if (!error) {
             NSString *callback = request.queryParameters[@"callback"];
             if (callback) {

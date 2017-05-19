@@ -11,10 +11,9 @@
 
 #import "WQRouter.h"
 #import "WQRouteRequest.h"
-#import "WQRouteDispatcher.h"
+#import "WQRouteHandler.h"
 #import "WQRouteMiddlewareProtocol.h"
 
 #import "WQRouteURLVerifyMiddleware.h"
-#import "WQRouteURLParserMiddleware.h"
 
 #endif /* WQRoute_h */

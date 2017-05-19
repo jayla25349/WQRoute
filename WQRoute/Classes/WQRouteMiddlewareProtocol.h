@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "WQRouteRequest.h"
-#import "WQRouteDispatcher.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol WQRouteMiddlewareProtocol <NSObject>
 
 @required
-- (nullable WQRouteRequest *)processRequest:(WQRouteRequest *)request dispatcher:(WQRouteDispatcher *)dispatcher;
+- (nullable WQRouteRequest *)processRequest:(WQRouteRequest *)request;
 
 @end
 

@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - WQRouteMiddlewareProtocol
 /**********************************************************************/
 
-- (nullable WQRouteRequest *)processRequest:(WQRouteRequest *)request dispatcher:(nonnull WQRouteDispatcher *)dispatcher {
+- (nullable WQRouteRequest *)processRequest:(WQRouteRequest *)request {
     
     //验证URL
     if (!request.URL) {
