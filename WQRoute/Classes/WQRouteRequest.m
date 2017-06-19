@@ -21,7 +21,7 @@ NSErrorDomain const WQRouteErrorDomian = @"WQRouteErrorDomian";
 @property (nonatomic, strong) NSURL *URL;
 @property (nonatomic, strong, nullable) id sender;
 @property (nonatomic, strong, nullable) id data;
-@property (nonatomic, copy,   nullable) WQRouteCallbackBlock callBack;
+@property (nonatomic, copy,   nullable) WQRouteCallbackBlock callback;
 @property (nonatomic, strong, nullable) NSDictionary *queryParameters;
 @end
 
@@ -35,7 +35,7 @@ NSErrorDomain const WQRouteErrorDomian = @"WQRouteErrorDomian";
         self.URL = URL;
         self.sender = sender;
         self.data = data;
-        self.callBack = block;
+        self.callback = block;
         
         //解析查询参数
         NSString *query = [self.URL.query stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -66,14 +66,14 @@ NSErrorDomain const WQRouteErrorDomian = @"WQRouteErrorDomian";
 /**********************************************************************/
 
 - (void)doResponseCallback:(nullable id)response {
-    if (self.callBack) {
-        self.callBack(self, response, nil);
+    if (self.callback) {
+        self.callback(self, response, nil);
     }
 }
 
 - (void)doErrorCallback:(nullable NSError *)error {
-    if (self.callBack) {
-        self.callBack(self, nil, error);
+    if (self.callback) {
+        self.callback(self, nil, error);
     }
 }
 
