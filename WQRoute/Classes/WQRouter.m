@@ -138,7 +138,7 @@ NS_ASSUME_NONNULL_BEGIN
         }
         
         //路由处理
-        __block exist = NO;
+        __block BOOL exist = NO;
         [[self.handlers copy] enumerateObjectsUsingBlock:^(WQRouteHandler * _Nonnull handler, NSUInteger idx, BOOL * _Nonnull stop) {
             if (![handler available]) {
                 [self.handlers removeObject:handler];
